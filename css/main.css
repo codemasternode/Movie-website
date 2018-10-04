@@ -1,0 +1,154 @@
+* {
+    --kolor-tla: #2b2e33;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+body {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    list-style-type: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.menu__item {
+    width: 100px;
+}
+
+.menu__item a {
+    color: #FF3819;
+}
+
+.menu__item a:hover {
+    cursor: pointer;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: var(--kolor-tla);
+}
+
+.header {
+    height: 100vh;
+    background: linear-gradient(132deg, white 0, rgb(231, 230, 230) 10%, rgb(43, 46, 51) 10.1%,rgb(43, 46, 51) 80%, rgb(231, 230, 230) 80.1%, white 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.header__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+    z-index: 2;
+    animation: headerbannermove 2s;
+    animation-timing-function: ease;
+}
+
+.header__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header__subtitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header__a{
+    padding: 20px 50px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 3rem;
+}
+
+.a--red {
+    background: #FF3819;
+    color: white;
+}
+
+.a--red:visited {
+    color: white;
+}
+
+.a--red:hover {
+    color: var(--kolor-tla);
+}
+
+@keyframes headerbannermove {
+    from {left: -100%}
+    to {left: 0%}
+}
+
+@media screen and (max-width: 470px) {
+    .menu {
+        flex-direction: column;
+    }
+    .menu__item {
+        padding-top: 20px;
+    }
+}
+
+.films {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.films span:hover {
+    cursor: pointer;
+}
+
+.films-carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 14vh;
+    margin-bottom: 14vh;
+}
+
+.films-list {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    list-style-type: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.film-item {
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.film-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.film-item img {
+    min-width: 150px;
+}

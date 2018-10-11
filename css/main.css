@@ -149,10 +149,13 @@ body {
 
 .film-item {
     margin: 10px;
-    transition: 200ms;
     position: absolute;
     max-height: 120px;
     top: 20px;
+}
+
+.film-item--transition {
+    transition: 200ms;
 }
 
 @keyframes show {
